@@ -9,7 +9,7 @@ val Juniversalchardet = "com.googlecode.juniversalchardet" % "juniversalchardet"
 lazy val commonSettings = Seq(
   name := "goose-fork",
   version := "2.1.23-SNAPSHOT",
-  scalaVersion := "2.11.8"
+  scalaVersion in ThisBuild := "2.11.8"
 )
 
 lazy val goose = (project in file(".")).
