@@ -6,6 +6,10 @@ val Httpclient = "org.apache.httpcomponents" % "httpclient" % "4.2.4"
 val CommonsLang = "commons-lang" % "commons-lang" % "2.6"
 val Juniversalchardet = "com.googlecode.juniversalchardet" % "juniversalchardet" % "1.0.3"
 
+// Force java version to use during build
+javacOptions in (Compile, compile) ++= Seq("-source", "1.8", "-target", "1.8")
+javacOptions in doc ++= Seq("-source", "1.8")
+
 lazy val commonSettings = Seq(
   name := "goose-fork",
   version := "2.1.23-SNAPSHOT",
